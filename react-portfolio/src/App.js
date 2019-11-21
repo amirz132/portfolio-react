@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import { Layout, Header, Navigation, Drawer, Content, Textfield } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
 
+
 function App() {
   return (
+    // eslint-disable-next-line
     <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedHeader fixedDrawer>
         <Header title="Title">
@@ -19,11 +20,11 @@ function App() {
             />
         </Header>
         <Drawer title="Title">
-            <Navigation>
-                <a to="/">Resume</a>
-                <a to="/">About Me</a>
-                <a to="/">Projects</a>
-                <a to="/">Contact</a>
+            <Navigation> 
+                <Link to="/resume">Resume</Link>
+                <Link to="/aboutme">About Me</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/contact">Contact</Link>
             </Navigation>
         </Drawer>
         <Content>
