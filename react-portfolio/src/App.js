@@ -10,7 +10,7 @@ function App() {
     // eslint-disable-next-line
     <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedHeader fixedDrawer>
-        <Header title="Title">
+        <Header className="header-color" title="Title" scroll>
             <Textfield
                 value=""
                 onChange={() => {}}
