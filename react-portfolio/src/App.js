@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content, Textfield } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
 
 
-function App() {
-  return (
+class App extends Component {
+ render(){
+  return ( 
     // eslint-disable-next-line
     <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedHeader fixedDrawer>
@@ -19,7 +20,7 @@ function App() {
                 expandableIcon="search"
             />
         </Header>
-        <Drawer title="Title">
+        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to ="/">MyPortfolio</Link>}>
             <Navigation> 
                 <Link to="/resume">Resume</Link>
                 <Link to="/aboutme">About Me</Link>
@@ -34,6 +35,8 @@ function App() {
     </Layout>
 </div>
   );
+  
+  }
 }
 
 export default App;
